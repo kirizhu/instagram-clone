@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import fetchData from "./Api";
 
 axios.defaults.baseURL = "https://picsum.photos";
 
@@ -8,18 +9,15 @@ const useAxios = ({ url }) => {
   const [error, setError] = useState("");
   const [loading, setloading] = useState(true);
 
-  const fetchData = () => {
-    axios
-      .get(url)
-      .then((res) => {
-        setResponse(res.data);
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setloading(false);
-      });
+  const fetchData = async () => {
+    try {
+      let res = await axios.get(url);
+      setResponse(res.data);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setloading(false);
+    }
   };
 
   useEffect(() => {
