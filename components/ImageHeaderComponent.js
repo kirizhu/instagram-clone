@@ -1,13 +1,13 @@
 import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
-
+import { StyleSheet, View, Text, TouchableOpacity, Alert } from "react-native";
+import { buttonAlert } from "./buttonAlert";
 import { Icon } from "@rneui/base";
 
 const ImageHeaderComponent = ({ item }) => {
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row" }}>
-        <TouchableOpacity style={{ margin: 10 }}>
+        <TouchableOpacity style={{ margin: 10 }} onPress={() => buttonAlert()}>
           <Icon name="account-circle" color="white" size={26} />
         </TouchableOpacity>
         <View style={{ flexDirection: "column" }}>
@@ -16,7 +16,7 @@ const ImageHeaderComponent = ({ item }) => {
         </View>
       </View>
       <View style={{ flexDirection: "row" }}>
-        <TouchableOpacity style={{ margin: 10 }}>
+        <TouchableOpacity style={{ margin: 10 }} onPress={() => buttonAlert()}>
           <Icon name="more" color="white" size={26} />
         </TouchableOpacity>
       </View>

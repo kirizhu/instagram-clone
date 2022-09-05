@@ -4,6 +4,7 @@ import { StyleSheet, View, TouchableOpacity } from "react-native";
 import { Header, HeaderProps } from "@rneui/themed";
 import { Icon } from "@rneui/base";
 import { useNavigation } from "@react-navigation/native";
+import { buttonAlert } from "./buttonAlert";
 
 const PageHeaderComponent = () => {
   const navigation = useNavigation();
@@ -24,18 +25,18 @@ const PageHeaderComponent = () => {
       backgroundColor={"black"}
       rightComponent={
         <View style={styles.headerRight}>
-          <TouchableOpacity onPress={() => console.log("pressed")}>
+          <TouchableOpacity onPress={() => buttonAlert()}>
             <Icon type="material" name="add" color="white" />
           </TouchableOpacity>
           <TouchableOpacity
             style={{ marginLeft: 10 }}
-            onPress={() => console.log("pressed")}
+            onPress={() => buttonAlert()}
           >
             <Icon type="material" name="favorite" color="white" />
           </TouchableOpacity>
           <TouchableOpacity
             style={{ marginLeft: 10 }}
-            onPress={() => console.log("pressed")}
+            onPress={() => buttonAlert()}
           >
             <Icon type="material" name="send" color="white" />
           </TouchableOpacity>
