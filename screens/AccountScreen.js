@@ -3,12 +3,21 @@ import React from "react";
 
 const AccountScreen = () => {
   return (
-    <View>
-      <Text>AccountScreen</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>AccountScreen</Text>
     </View>
   );
 };
 
 export default AccountScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "black",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    color: "white",
+  },
+});
