@@ -3,7 +3,7 @@ import React from "react";
 
 const AccountScreen = () => {
   return (
-    <View style={styles.container}>
+    <View>
       <Text style={styles.text}>AccountScreen</Text>
     </View>
   );
@@ -12,12 +12,10 @@ const AccountScreen = () => {
 export default AccountScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "black",
-    justifyContent: "center",
-    alignItems: "center",
-  },
   text: {
     color: "white",
+    position: "relative",
+    top: 200,
+    left: 150,
   },
 });

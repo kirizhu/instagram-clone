@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Coding assignment ",
+    "githubUrl": "https://github.com/kirizhu/instagram-clone"
   }
 }
